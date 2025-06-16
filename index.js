@@ -27,6 +27,14 @@ const server = http
           res.write(
             pug.renderFile('./form.pug', {
               path: req.url,
+              firstItem: '焼肉',
+              secondItem: '湯豆腐'
+            })
+          );
+        }else if (req.url === '/enquetes/rice-bread') {
+          res.write(
+            pug.renderFile('./form.pug', {
+              path: req.url,
               firstItem: 'ごはん',
               secondItem: 'パン'
             })
